@@ -5,6 +5,8 @@ import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Stories from "./pages/Stories";
+import Films from "./pages/Films";
+import Contact from "./pages/Contact";
 
 import './App.css';
 
@@ -23,6 +25,9 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/stories" element={<Stories />} />
+          <Route path="/films" element={<Films />} />
+          <Route path="/contact" element={<Contact />} />
+          
         </Routes>
 
         <Footer />
