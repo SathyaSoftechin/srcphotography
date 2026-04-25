@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 import heroImg from "../assets/films/heroImg.png";
 import film1 from "../assets/films/img1.png";
@@ -12,6 +13,7 @@ import film5 from "../assets/films/img5.png";
 
 export default function Films() {
   const [activeVideo, setActiveVideo] = useState(null);
+  
 
   const films = [
     {
@@ -39,6 +41,7 @@ export default function Films() {
       video: "https://www.youtube.com/embed/ysz5S6PUM-U?autoplay=1&mute=1",
     },
   ];
+  const navigate = useNavigate();
 
   return (
     <div className="bg-black text-white mt-20">
@@ -261,6 +264,7 @@ export default function Films() {
 
         {/* CTA Button */}
         <motion.button
+          onClick={() => navigate("/contact")}
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3 }}

@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import aboutHero from "../assets/about/img1.png";
 import cam1 from "../assets/about/img2.png";
@@ -7,6 +8,8 @@ import cam4 from "../assets/about/img5.png";
 import cam5 from "../assets/about/img6.png";
 
 export default function About() {
+  const navigate = useNavigate();
+
   return (
     <div className="bg-black text-white overflow-x-hidden">
       {/* ================= HERO ================= */}
@@ -229,6 +232,7 @@ export default function About() {
         </motion.h2>
 
         <motion.button
+          onClick={() => navigate("/contact")}
           whileHover={{
             scale: 1.05,
             backgroundColor: "#f59e0b",

@@ -16,11 +16,13 @@ import img11 from "../assets/home/img11.png";
 import img12 from "../assets/home/img12.png";
 import img13 from "../assets/home/img13.png";
 import heroVideo from "../assets/home/videos/home-video.mp4";
+import { useNavigate } from "react-router-dom";
 
 export default function Home() {
   const [isOpen, setIsOpen] = useState(false);
   const [testimonialIndex, setTestimonialIndex] = useState(0);
   const [activeFAQ, setActiveFAQ] = useState(null);
+  const navigate = useNavigate();
 
   const testimonials = [
     {
@@ -181,6 +183,7 @@ export default function Home() {
 
           {/* Optional CTA (Highly Recommended) */}
           <motion.button
+            onClick={() => navigate("/films")}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1.6, duration: 0.6 }}
