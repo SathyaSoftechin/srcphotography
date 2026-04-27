@@ -1,5 +1,6 @@
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import ScrollToTop from "./components/ScrollToTop";
 
 // Pages
 import Home from "./pages/Home";
@@ -16,6 +17,7 @@ function App() {
   return (
     <Router>
       <div className="bg-black text-white overflow-x-hidden">
+        <ScrollToTop />
         
         {/* Universal Navbar */}
         <Navbar />
